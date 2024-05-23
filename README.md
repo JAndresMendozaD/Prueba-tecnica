@@ -7,6 +7,7 @@ Este proyecto contiene una aplicación web básica desarrollada con Node.js, MyS
 1. **Conexión a Base de Datos MySQL y Manejo de Funciones Directas a Base de Datos**: Crear y manipular una tabla de usuarios.
 2. **Ejecutables Directos desde Servidor para Tareas Automáticas Programadas**: Realizar una copia de seguridad diaria de la base de datos.
 3. **Desarrollo Web bajo Código PHP Nativo, HTML, CSS, JavaScript y WordPress**: Crear una aplicación web con registro, inicio de sesión y un panel de usuario.
+4. **Conocimientos en Linux y MongoDB**: Conexión a MongoDB, creación de una colección y manipulación de documentos usando Node.js.
 
 ## Estructura del Proyecto
 
@@ -32,6 +33,7 @@ prueba-tecnica/
 ├── procesar_login.php # Script PHP para procesar el inicio de sesión
 ├── dashboard.php # Página de panel de usuario
 ├── cerrar_sesion.php # Script PHP para cerrar sesión
+├── mongo_script.js
 └── README.md # Instrucciones del proyecto
 
 ## Instrucciones para Ejecutar el Proyecto
@@ -65,7 +67,7 @@ prueba-tecnica/
 3. **Cerrar Sesión**:
     - Hacer clic en el enlace "Cerrar Sesión" en `dashboard.php` para finalizar la sesión.
 
-## Ejecución del Proyecto
+### Ejecución del Proyecto
 
 1. **Clonar el Repositorio**:
     ```sh
@@ -94,6 +96,22 @@ prueba-tecnica/
     - Registro: `http://localhost/index.php`
     - Inicio de Sesión: `http://localhost/login.php`
     - Panel de Usuario: `http://localhost/dashboard.php`
+
+## Parte 4: Conocimientos en Linux y MongoDB
+
+**Archivos Principales**
+    - mongo_script.js: Script para conectar a MongoDB, crear la colección productos, insertar documentos y definir una función para obtener el precio de un producto.
+
+**Configuración**
+Instala MongoDB y asegúrate de que esté ejecutándose.
+Instala las dependencias necesarias:
+    ```sh
+    npm install mongodb
+
+**Ejecución**
+Ejecuta el script mongo_script.js con Node.js:
+    ```sh
+    node mongo_script.js
 
 ## Contacto
 Para más información, contacta con Andres a través de jamendozad01@gmail.com.
