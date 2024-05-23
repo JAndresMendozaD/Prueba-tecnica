@@ -65,6 +65,34 @@ El script maneja el cierre de la conexión a la base de datos cuando el proceso 
     process.on('exit', () => {
     conexion.end();
 });
+# Actualizacion.
+# Parte 2: Tarea Automática Programada para Backup de Base de Datos
+Este proyecto incluye una tarea automática programada que realiza una copia de seguridad de la base de datos MySQL cada día a las 12:00 PM.
+
+## Archivos
+backup.js: Contiene el script para realizar la copia de seguridad y la tarea programada.
+
+## Instalación del Script de Backup
+1. Instala las dependencias necesarias:
+    npm install node-cron
+    npm install mysql
+
+2. Asegúrate de que tienes mysqldump instalado y disponible en tu PATH.
+
+3. Configura los detalles de conexión a la base de datos en el archivo 'backup.js':
+    const DB_HOST = 'localhost';
+    const DB_USER = 'root';
+    const DB_PASSWORD = 'administrador';
+    const DB_NAME = 'prueba_tecnica';
+
+## Ejecución del Script de Backup
+Para ejecutar el script de backup y configurar la tarea programada, utiliza el siguiente comando:
+
+    node backup.js
+
+
+
+
 
 ### Contacto.
 Para más información, contacta con Andres a través de jamendozad01@gmail.com.
