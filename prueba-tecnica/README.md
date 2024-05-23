@@ -66,7 +66,7 @@ El script maneja el cierre de la conexión a la base de datos cuando el proceso 
     conexion.end();
 });
 # Actualizacion.
-# Parte 2: Tarea Automática Programada para Backup de Base de Datos
+## Parte 2: Tarea Automática Programada para Backup de Base de Datos
 Este proyecto incluye una tarea automática programada que realiza una copia de seguridad de la base de datos MySQL cada día a las 12:00 PM.
 
 ## Archivos
@@ -90,8 +90,51 @@ Para ejecutar el script de backup y configurar la tarea programada, utiliza el s
 
     node backup.js
 
+# Actualizacion.
 
+## Parte 3: Desarrollo Web bajo Código PHP Nativo, HTML, CSS, JavaScript y WordPress
 
+1. **Configurar el Entorno de PHP**:
+    - Asegurarse de tener un servidor web (como Apache) y PHP configurados correctamente.
+    - Colocar los archivos PHP en el directorio raíz del servidor web.
+
+2. **Páginas Web**:
+    - **Registro de Usuarios**: Acceder a `index.php` para registrar nuevos usuarios.
+    - **Inicio de Sesión**: Acceder a `login.php` para iniciar sesión.
+    - **Panel de Usuario**: Acceder a `dashboard.php` (solo accesible después de iniciar sesión).
+
+3. **Cerrar Sesión**:
+    - Hacer clic en el enlace "Cerrar Sesión" en `dashboard.php` para finalizar la sesión.
+
+## Ejecución del Proyecto
+
+1. **Clonar el Repositorio**:
+    ```sh
+    git clone https://github.com/JAndresMendozaD/Prueba-tecnica.git
+    cd Prueba-tecnica
+    ```
+
+2. **Instalar Dependencias**:
+    ```sh
+    npm install
+    ```
+
+3. **Configurar Base de Datos**:
+    - Actualizar las credenciales de MySQL en `db.js` y `db.php`.
+
+4. **Ejecutar Scripts de Node.js**:
+    ```sh
+    node index.js
+    node backup.js
+    ```
+
+5. **Configurar Servidor Web**:
+    - Asegurarse de que los archivos PHP estén en el directorio raíz del servidor web.
+
+6. **Acceder a la Aplicación**:
+    - Registro: `http://localhost/index.php`
+    - Inicio de Sesión: `http://localhost/login.php`
+    - Panel de Usuario: `http://localhost/dashboard.php`
 
 
 ### Contacto.

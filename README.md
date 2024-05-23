@@ -1,70 +1,99 @@
-# Prueba Técnica - Parte 1
-## Gestión de Usuarios con Node.js y MySQL
+# Proyecto de Prueba Técnica
 
 ## Descripción
-Este proyecto implementa una interfaz simple en Node.js para gestionar una base de datos MySQL que almacena información de usuarios. Incluye operaciones básicas como la creación de una tabla, inserción de datos, y actualización y consulta de información.
 
-## Requisitos
+Este proyecto contiene una aplicación web básica desarrollada con Node.js, MySQL y PHP. El objetivo es cumplir con los requisitos de una prueba técnica, hasta ahora consta de tres partes:
 
-Para ejecutar este proyecto necesitas tener instalados los siguientes componentes en tu sistema:
-- Node.js
-- MySQL
-- NPM (para manejar las dependencias de Node.js)
+1. **Conexión a Base de Datos MySQL y Manejo de Funciones Directas a Base de Datos**: Crear y manipular una tabla de usuarios.
+2. **Ejecutables Directos desde Servidor para Tareas Automáticas Programadas**: Realizar una copia de seguridad diaria de la base de datos.
+3. **Desarrollo Web bajo Código PHP Nativo, HTML, CSS, JavaScript y WordPress**: Crear una aplicación web con registro, inicio de sesión y un panel de usuario.
 
-## Configuración inicial
+## Estructura del Proyecto
 
-### Base de Datos
+prueba-tecnica/
+│
+├── backup/
+│ └── backups/ # Carpeta donde se almacenan los backups de la base de datos
+│
+├── styles/ # Carpeta para archivos CSS
+│ ├── style-dashboard.css
+│ └── style-home.css
+│
+├── img/ # Carpeta para imágenes
+│ └── fondo-pixel.jpg
+│
+├── db.js # Script de conexión a la base de datos MySQL con Node.js
+├── backup.js # Script de Node.js para realizar el backup de la base de datos
+├── index.js # Script principal de Node.js para crear e insertar datos en la tabla de usuarios
+├── db.php # Script PHP para la conexión a la base de datos MySQL
+├── index.php # Página de registro de usuarios
+├── procesar_registro.php # Script PHP para procesar el registro de usuarios
+├── login.php # Página de inicio de sesión
+├── procesar_login.php # Script PHP para procesar el inicio de sesión
+├── dashboard.php # Página de panel de usuario
+├── cerrar_sesion.php # Script PHP para cerrar sesión
+└── README.md # Instrucciones del proyecto
 
-Primero, asegúrate de que tu servidor MySQL esté corriendo y configura la base de datos siguiendo estos pasos:
+## Instrucciones para Ejecutar el Proyecto
 
-1. Inicia sesión en MySQL:
-   ```bash
-   mysql -u root -p
+### Parte 1: Conexión a Base de Datos MySQL y Manejo de Funciones Directas a Base de Datos
 
-2. Crea una nueva base de datos:
-   ```sql
-   CREATE DATABASE prueba_tecnica;
-   USE prueba_tecnica;
+1. **Configurar MySQL**:
+    - Crear una base de datos llamada `prueba_tecnica`.
+    - Configurar el usuario y contraseña de MySQL en el archivo `db.js`.
 
-3. Instalacion de dependencias:
-    Este proyecto requiere el paquete 'mysql' de Node.js. Instálalo ejecutando:
-    ```bash
-    npm install mysql
+2. **Ejecutar Scripts de Node.js**:
+    - Ejecutar `node index.js` para crear la tabla `usuarios` e insertar los datos iniciales.
 
-## Estructura del Proyecto:
+### Parte 2: Ejecutables Directos desde Servidor para Tareas Automáticas Programadas
 
-El proyecto consta de dos archivos principales:
+1. **Configurar el Cron Job**:
+    - Instalar las dependencias ejecutando `npm install` en el directorio del proyecto.
+    - Ejecutar `node backup.js` para programar la tarea automática que realizará el backup diario a las 9:30 PM.
 
-db.js: Configura la conexión a la base de datos.
-index.js: Contiene las funciones para interactuar con la base de datos (crear tabla, insertar datos, etc.).
+### Parte 3: Desarrollo Web bajo Código PHP Nativo, HTML, CSS, JavaScript y WordPress
 
-## Configuración de la conexión
+1. **Configurar el Entorno de PHP**:
+    - Asegurarse de tener un servidor web (como Apache) y PHP configurados correctamente.
+    - Colocar los archivos PHP en el directorio raíz del servidor web.
 
-Asegúrate de actualizar los detalles de conexión en db.js con tus propios valores de acceso a la base de datos MySQL:
+2. **Páginas Web**:
+    - **Registro de Usuarios**: Acceder a `index.php` para registrar nuevos usuarios.
+    - **Inicio de Sesión**: Acceder a `login.php` para iniciar sesión.
+    - **Panel de Usuario**: Acceder a `dashboard.php` (solo accesible después de iniciar sesión).
 
-const conexion = mysql.createConnection({
-    host: 'localhost',
-    user: 'tu_usuario',
-    password: 'tu_contraseña',
-    database: 'prueba_tecnica'
-});
+3. **Cerrar Sesión**:
+    - Hacer clic en el enlace "Cerrar Sesión" en `dashboard.php` para finalizar la sesión.
 
-## Ejecución del proyecto
-Para ejecutar el proyecto, simplemente corre el siguiente comando en la terminal en el directorio del proyecto:
-    ```bash
+## Ejecución del Proyecto
+
+1. **Clonar el Repositorio**:
+    ```sh
+    git clone https://github.com/JAndresMendozaD/Prueba-tecnica.git
+    cd Prueba-tecnica
+    ```
+
+2. **Instalar Dependencias**:
+    ```sh
+    npm install
+    ```
+
+3. **Configurar Base de Datos**:
+    - Actualizar las credenciales de MySQL en `db.js` y `db.php`.
+
+4. **Ejecutar Scripts de Node.js**:
+    ```sh
     node index.js
+    node backup.js
+    ```
 
-## Funcionalidades implementadas:
-Creación de la tabla usuarios: Crea una tabla si no existe.
-Inserción de datos: Inserta datos iniciales en la tabla.
-Obtención de nombres por email: Consulta nombres de usuario basados en su email.
-Actualización de contraseñas por nombre: Actualiza la contraseña de un usuario basado en su nombre.
+5. **Configurar Servidor Web**:
+    - Asegurarse de que los archivos PHP estén en el directorio raíz del servidor web.
 
-## Cierre de la base de datos.
-El script maneja el cierre de la conexión a la base de datos cuando el proceso de Node.js termina:
-    process.on('exit', () => {
-    conexion.end();
-});
+6. **Acceder a la Aplicación**:
+    - Registro: `http://localhost/index.php`
+    - Inicio de Sesión: `http://localhost/login.php`
+    - Panel de Usuario: `http://localhost/dashboard.php`
 
-### Contacto.
+## Contacto
 Para más información, contacta con Andres a través de jamendozad01@gmail.com.
