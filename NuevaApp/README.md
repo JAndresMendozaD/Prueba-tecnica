@@ -8,4 +8,4 @@ Durante el desarrollo de la aplicación, se enfrentaron algunos problemas espec�
 Se encontraron dificultades al establecer la conexión con la base de datos MongoDB desde la aplicación Angular. A pesar de los intentos realizados para solucionar este problema, se persistió con errores y la conexión no se logró establecer adecuadamente.
 
 ### Contenido Compartido
-A pesar de los problemas mencionados, se comparte en este directorio el código desarrollado hasta el momento. Esto incluye tanto el frontend desarrollado en Angular como el backend en Node.js. Aunque la funcionalidad completa de la aplicación no pudo ser lograda debido a los problemas mencionados, se proporciona el código desarrollado hasta el momento para su revisión y análisis.
+A pesar de los problemas mencionados, se comparte en este directorio el código desarrollado hasta el momento. Esto incluye tanto el frontend desarrollado en Angular como el backend en Node.js. Aunque la funcionalidad completa de la aplicación no pudo ser lograda debido a los problemas mencionados.
