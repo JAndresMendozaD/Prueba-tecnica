@@ -1,0 +1,5 @@
+<!-- add-product.component.html -->
+<ion-input placeholder="Nombre" [(ngModel)]="newProduct.name"></ion-input>
+<ion-input type="number" placeholder="Precio" [(ngModel)]="newProduct.price"></ion-input>
+<ion-input type="number" placeholder="Cantidad" [(ngModel)]="newProduct.quantity"></ion-input>
+<ion-button (click)="addProduct()">Añadir Producto</ion-button>
